@@ -1,33 +1,3 @@
-############################################################################################################################################################                      
-#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : AcidBurn          | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
-# Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Prank             | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
-# Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
-# Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
-#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
-#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
-#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
-#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby        (youtube link with demonstration coming soon)                              #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
-############################################################################################################################################################
-
-<#
-.NOTES
-	This script was not optimized to shorten the code. This script is intended to have as much readability as possible for new coders to learn.
-
-.DESCRIPTION 
-	This program gathers details from target PC to include Operating System, RAM Capacity, Public IP, and Email associated with microsoft account.
-	The SSID and WiFi password of any current or previously connected to networks.
-	It determines the last day they changed their password and how many days ago.
-	Once the information is gathered the script will pause until a mouse movement is detected
-	Then the script uses Sapi speak to roast their set up and lack of security
-#>
 ############################################################################################################################################################
 
 # Variables
