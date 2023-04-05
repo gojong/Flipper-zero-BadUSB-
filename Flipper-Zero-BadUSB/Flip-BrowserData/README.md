@@ -9,16 +9,6 @@
     <li><a href="#Acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
-# Get-BrowserData
-
-<p align="center">
-      <a href="https://youtu.be/2qkgQAwDZgk">
-        <img src=https://i.ytimg.com/vi/2qkgQAwDZgk/maxresdefault.jpg width="300" alt="Python" />
-      </a>
-      <br>YouTube Tutorial	
-</p>
-
 ## Description
 
 This payload can be used to retrieve the browsing history and bookmarks from Edge, Chrome, Opera GX, and Firefox (no bookmarks from firefox currently).
