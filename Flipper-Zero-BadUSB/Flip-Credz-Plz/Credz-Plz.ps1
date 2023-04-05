@@ -1,37 +1,3 @@
-############################################################################################################################################################                      
-#                                  |  ___                           _           _              _             #              ,d88b.d88b                     #                                 
-# Title        : Credz-Plz         | |_ _|   __ _   _ __ ___       | |   __ _  | | __   ___   | |__    _   _ #              88888888888                    #           
-# Author       : I am Jakoby       |  | |   / _` | | '_ ` _ \   _  | |  / _` | | |/ /  / _ \  | '_ \  | | | |#              `Y8888888Y'                    #           
-# Version      : 1.0               |  | |  | (_| | | | | | | | | |_| | | (_| | |   <  | (_) | | |_) | | |_| |#               `Y888Y'                       #
-# Category     : Credentials       | |___|  \__,_| |_| |_| |_|  \___/   \__,_| |_|\_\  \___/  |_.__/   \__, |#                 `Y'                         #
-# Target       : Windows 7,10,11   |                                                                   |___/ #           /\/|_      __/\\                  #     
-# Mode         : HID               |                                                           |\__/,|   (`\ #          /    -\    /-   ~\                 #             
-#                                  |  My crime is that of curiosity                            |_ _  |.--.) )#          \    = Y =T_ =   /                 #      
-#                                  |   and yea curiosity killed the cat                        ( T   )     / #   Luther  )==*(`     `) ~ \   Hobo          #                                                                                              
-#                                  |    but satisfaction brought him back                     (((^_(((/(((_/ #          /     \     /     \                #    
-#__________________________________|_________________________________________________________________________#          |     |     ) ~   (                #
-#  tiktok.com/@i_am_jakoby                                                                                   #         /       \   /     ~ \               #
-#  github.com/I-Am-Jakoby                                                                                    #         \       /   \~     ~/               #         
-#  twitter.com/I_Am_Jakoby                                                                                   #   /\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_#                     
-#  instagram.com/i_am_jakoby                                                                                 #  |  |  |  | ) ) |  |  | ((  |  |  |  |  |  |#              
-#  youtube.com/c/IamJakoby                                                                                   #  |  |  |  |( (  |  |  |  \\ |  |  |  |  |  |#
-############################################################################################################################################################
-
-<#
-.SYNOPSIS
-	This script is meant to trick your target into sharing their credentials through a fake authentication pop up message
-
-.DESCRIPTION 
-	A pop up box will let the target know "Unusual sign-in. Please authenticate your Microsoft Account"
-	This will be followed by a fake authentication ui prompt. 
-	If the target tried to "X" out, hit "CANCEL" or while the password box is empty hit "OK" the prompt will continuously re pop up 
-	Once the target enters their credentials their information will be uploaded to either your Dropbox or Discord webhook for collection
-
-.Link
-	https://developers.dropbox.com/oauth-guide		# Guide for setting up your DropBox for uploads
-
-#>
-
 #------------------------------------------------------------------------------------------------------------------------------------
 # This is for if you want to host your own version of the script
 
