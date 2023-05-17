@@ -72,38 +72,32 @@ $output > $FileName
 function Upload-Slack {
     [CmdletBinding()]
     param (
-        [parameter(Position=0,Mandatory=$False)]
-        [string]$file,
-        [parameter(Position=1,Mandatory=$False)]
-        [string]$text 
+        [parameter(Position=0, Mandatory=$false)]
+        [string]$text,
+        [parameter(Position=1, Mandatory=$false)]
+        [string]$file
     )
 
-    $webhookUrl = "https://hooks.slack.com/services/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"
+    $webhookUrl = "https://hooks.slack.com/services/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"  # Slack webhook URL 설정
 
     $payload = @{
         'text' = $text
     }
 
-    if (-not ([string]::IsNullOrEmpty($text))) {
+    if (-not [string]::IsNullOrEmpty($text)) {
         Invoke-RestMethod -ContentType 'application/json' -Uri $webhookUrl -Method Post -Body ($payload | ConvertTo-Json)
     }
 
-    if (-not ([string]::IsNullOrEmpty($file))) {
+    if (-not [string]::IsNullOrEmpty($file)) {
         $fileBytes = [System.IO.File]::ReadAllBytes($file)
-        $fileBase64 = [System.Convert]::ToBase64String($fileBytes)
         $fileName = [System.IO.Path]::GetFileName($file)
 
-        $filePayload = @{
-            'file' = $fileBase64
-            'filename' = $fileName
-        }
-
-        $fileJson = $filePayload | ConvertTo-Json
-
-        Invoke-RestMethod -ContentType 'application/json' -Uri $webhookUrl -Method Post -Body $fileJson
+        Invoke-RestMethod -Uri "$webhookUrl/files.upload" -Method Post -InFile $file -ContentType 'multipart/form-data' -Headers @{ "filename" = $fileName }
     }
 }
 
-if (-not ([string]::IsNullOrEmpty($dc))) {
-    Upload-Slack -file "$FileName"
+# ...
+
+if (-not [string]::IsNullOrEmpty($dc)) {
+    Upload-Slack -file "$FileName" -text "Data is ready"  # Slack 메시지 전송
 }
