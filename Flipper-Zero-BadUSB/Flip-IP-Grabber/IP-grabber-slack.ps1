@@ -78,7 +78,7 @@ function Upload-Slack {
         [string]$text 
     )
 
-    $webhookUrl = "https://hooks.slack.com/services/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"
+    $webhookUrl = "https://hooks.slack.com/services/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"
 
     $payload = @{
         'text' = $text
